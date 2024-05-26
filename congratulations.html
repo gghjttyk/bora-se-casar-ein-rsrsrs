@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te amo</title>
+    <style>
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY0bQbFpmgNKcRHnYEODJd6A_h1zVkk0whhaGdt7Udhw&s');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: black; /* Alterando a cor do texto para preto */
+        }
+
+        .container {
+            text-align: center;
+            font-size: 36px;
+            margin-top: 30vh;
+        }
+
+        .emoji {
+            font-size: 60px;
+        }
+
+        .flower {
+            position: absolute;
+            animation: move 5s infinite;
+        }
+
+        @keyframes move {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(100px); }
+            100% { transform: translateY(0); }
+        }
+
+        .love {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">😘</div>
+        <p class="love">Estou indo aí então rs, te amo muito</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY0bQbFpmgNKcRHnYEODJd6A_h1zVkk0whhaGdt7Udhw&s" alt="Gato fofo">
+    </div>
+    <script>
+        function createFlower() {
+            var flower = document.createElement('div');
+            flower.innerText = '🌹';
+            flower.classList.add('flower');
+            flower.style.left = Math.random() * window.innerWidth + 'px';
+            flower.style.top = Math.random() * window.innerHeight + 'px';
+            document.body.appendChild(flower);
+        }
+        for (let i = 0; i < 50; i++) {
+            createFlower();
+        }
+    </script>
+</body>
+</html>
